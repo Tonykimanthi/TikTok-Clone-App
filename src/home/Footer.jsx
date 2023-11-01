@@ -3,6 +3,7 @@ import SquarePlus from "../assets/SquarePlus";
 import Discover from "../assets/Discover";
 import ChatBubble from "../assets/ChatBubble";
 import User from "../assets/User";
+import VideoTimeline from "./VideoTimeline";
 
 const Footer = () => {
   return (
@@ -33,6 +34,7 @@ const Footer = () => {
             Profile
           </button>
         </div>
+        <VideoTimeline />
       </main>
     </footer>
   );
