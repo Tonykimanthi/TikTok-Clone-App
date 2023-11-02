@@ -1,4 +1,4 @@
-const Discover = () => {
+const DiscoverIcon = () => {
   return (
     <svg
       width="35"
@@ -19,4 +19,4 @@ const Discover = () => {
   );
 };
 
-export default Discover;
+export default DiscoverIcon;

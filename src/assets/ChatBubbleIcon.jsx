@@ -1,5 +1,5 @@
 
-const ChatBubble = () => {
+const ChatBubbleIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ const ChatBubble = () => {
   );
 };
 
-export default ChatBubble;
+export default ChatBubbleIcon;

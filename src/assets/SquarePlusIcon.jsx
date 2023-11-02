@@ -1,4 +1,4 @@
-const SquarePlus = () => {
+const SquarePlusIcon = () => {
   return (
     <svg
       fill="none"
@@ -15,4 +15,4 @@ const SquarePlus = () => {
   );
 };
 
-export default SquarePlus;
+export default SquarePlusIcon;

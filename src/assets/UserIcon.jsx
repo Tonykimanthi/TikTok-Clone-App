@@ -1,5 +1,5 @@
 
-const User = () => {
+const UserIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserIcon;

@@ -1,8 +1,8 @@
 import HomeIcon from "../assets/HomeIcon";
-import SquarePlus from "../assets/SquarePlus";
-import Discover from "../assets/Discover";
-import ChatBubble from "../assets/ChatBubble";
-import User from "../assets/User";
+import SquarePlusIcon from "../assets/SquarePlusIcon";
+import DiscoverIcon from "../assets/DiscoverIcon";
+import ChatBubbleIcon from "../assets/ChatBubbleIcon";
+import UserIcon from "../assets/UserIcon";
 import VideoTimeline from "./VideoTimeline";
 
 const Footer = () => {
@@ -16,21 +16,21 @@ const Footer = () => {
             Home
           </button>
           <button className="text-[#f5e2cb] text-sm grid place-items-center leading-4">
-            <Discover />
+            <DiscoverIcon />
             Discover
           </button>
         </div>
         <button className="text-white">
-          <SquarePlus />
+          <SquarePlusIcon />
         </button>
         {/* Inbox/Profile */}
         <div className="flex items-center gap-x-5">
           <button className="text-[#f5e2cb] text-sm grid place-items-center leading-4">
-            <ChatBubble />
+            <ChatBubbleIcon />
             Inbox
           </button>
           <button className="text-[#f5e2cb] text-sm grid place-items-center leading-4">
-            <User />
+            <UserIcon />
             Profile
           </button>
         </div>
