@@ -6,7 +6,7 @@ import ArrowUpIcon from "../assets/ArrowUpIcon";
 
 const SidePanel = () => {
   return (
-    <aside className="absolute -bottom-7 right-2 text-white text-sm">
+    <aside className="absolute bottom-0 right-2 text-white text-sm">
       <main className="space-y-2">
         {/* Profile image */}
         <article className="w-10 h-10 border border-white rounded-full overflow-hidden cursor-pointer">
@@ -41,10 +41,6 @@ const SidePanel = () => {
           <span>248</span>
         </article>
       </main>
-
-      <button className="mt-2 grid place-items-center w-10">
-        <ArrowUpIcon />
-      </button>
     </aside>
   );
 };
