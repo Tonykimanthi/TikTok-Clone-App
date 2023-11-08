@@ -7,8 +7,8 @@ const HeartIcon = ({ handleLike, likeFilled }) => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className={`w-7 h-7 ${likeFilled ? "fill-pink-500" : "fill-white"} ${
-        likeFilled ? "stroke-pink-500" : "stroke-white"
+      className={`w-7 h-7 ${
+        likeFilled ? "fill-pink-500 stroke-pink-500" : "fill-white stroke-white"
       } cursor-pointer`}
     >
       <path

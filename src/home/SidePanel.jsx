@@ -10,12 +10,21 @@ const SidePanel = () => {
   const [favFilled, setFavFilled] = useState(false);
   const [favCount, setFavCount] = useState(0);
 
-  const handleLike = (e) => {
+  const handleLike = () => {
     setLikeFilled(!likeFilled);
-    if(!likeFilled){
+    if (!likeFilled) {
       setLikesCount(likesCount + 1);
-    }else{
+    } else {
       setLikesCount(likesCount - 1);
+    }
+  };
+
+  const handleFavourite = () => {
+    setFavFilled(!favCount);
+    if(!favFilled){
+      setFavCount(favCount + 1);
+    }else{
+      setFavCount(favCount - 1);
     }
   };
 
@@ -45,8 +54,8 @@ const SidePanel = () => {
 
         {/* Favourite */}
         <article className="grid place-items-center">
-          <BookmarkIcon />
-          <span>248</span>
+          <BookmarkIcon handleFavourite={handleFavourite} favFilled={favFilled}/>
+          <span>{favCount}</span>
         </article>
 
         {/* Share */}

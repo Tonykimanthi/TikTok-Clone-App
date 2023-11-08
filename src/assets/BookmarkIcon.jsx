@@ -1,4 +1,4 @@
-const BookmarkIcon = () => {
+const BookmarkIcon = ({ handleFavourite, favFilled }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,7 +6,12 @@ const BookmarkIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-7 h-7 fill-white cursor-pointer"
+      className={`w-7 h-7 ${
+        favFilled
+          ? "fill-yellow-400 stroke-yellow-400"
+          : "fill-white stroke-white"
+      } cursor-pointer`}
+      onClick={handleFavourite}
     >
       <path
         strokeLinecap="round"
