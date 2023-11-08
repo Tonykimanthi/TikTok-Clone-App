@@ -2,9 +2,23 @@ import HeartIcon from "../assets/HeartIcon";
 import CommentIcon from "../assets/CommentIcon";
 import BookmarkIcon from "../assets/BookmarkIcon";
 import ArrowShareIcon from "../assets/ArrowShareIcon";
-import ArrowUpIcon from "../assets/ArrowUpIcon";
+import { useState } from "react";
 
 const SidePanel = () => {
+  const [likeFilled, setLikeFilled] = useState(false);
+  const [likesCount, setLikesCount] = useState(0);
+  const [favFilled, setFavFilled] = useState(false);
+  const [favCount, setFavCount] = useState(0);
+
+  const handleLike = (e) => {
+    setLikeFilled(!likeFilled);
+    if(!likeFilled){
+      setLikesCount(likesCount + 1);
+    }else{
+      setLikesCount(likesCount - 1);
+    }
+  };
+
   return (
     <aside className="absolute bottom-0 right-2 text-white text-sm">
       <main className="space-y-2">
@@ -19,8 +33,8 @@ const SidePanel = () => {
 
         {/* Likes */}
         <article className="grid place-items-center">
-          <HeartIcon />
-          <span>3500</span>
+          <HeartIcon handleLike={handleLike} likeFilled={likeFilled} />
+          <span>{likesCount}</span>
         </article>
 
         {/* Comments */}
