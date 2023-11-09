@@ -1,8 +1,11 @@
 import { useState } from "react";
 import XmarkIcon from "../assets/CloseCommentsIcon";
-import PrimaryComment from "./PrimaryComment";
+import PrimaryComment from "./DisplayComments";
+import AddNewComment from "./AddNewComment";
 
-const Comments = () => {
+const CommentsContainer = () => {
+  const [text, setText] = useState("");
+
   const [userComment, setUserComment] = useState([
     {
       imgURL:
@@ -19,6 +22,12 @@ const Comments = () => {
       timeElapsed: "8h",
     },
   ]);
+
+  const handleDisplayIcon = (e) => {
+    setText(e.target.value)
+  };
+
+
   return (
     <section className="bg-white p-2 absolute bottom-0 top-40 left-0 right-0">
       <header className="flex justify-center items-center">
@@ -29,11 +38,12 @@ const Comments = () => {
       </header>
       <main className="mt-4">
         <ul className="space-y-4">
-          <PrimaryComment userComment={userComment}/>
+          <PrimaryComment userComment={userComment} />
         </ul>
       </main>
+      <AddNewComment text={text} handleDisplayIcon={handleDisplayIcon}/>
     </section>
   );
 };
 
-export default Comments;
+export default CommentsContainer;

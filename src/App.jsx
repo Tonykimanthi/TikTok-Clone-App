@@ -1,5 +1,5 @@
 import Home from "./home/Home";
-import Comments from "./home/CommentsSection";
+import CommentsContainer from "./home/CommentsContainer";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       </h1>
       <div className="bg-white mt-3 w-11/12 max-w-xs h-[85vh] rounded overflow-hidden relative">
         <Home />
-        <Comments />
+        <CommentsContainer />
       </div>
     </>
   );

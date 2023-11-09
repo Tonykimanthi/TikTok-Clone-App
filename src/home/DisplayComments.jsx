@@ -1,4 +1,3 @@
-import HeartIcon from "../assets/HeartIcon";
 import DislikeIcon from "../assets/DislikeIcon";
 import LikeComment from "./LikeComment";
 
