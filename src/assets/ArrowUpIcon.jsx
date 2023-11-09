@@ -1,9 +1,9 @@
-const ArrowUpIcon = ({ text }) => {
+const ArrowUpIcon = ({ text, handleAddComment }) => {
   return (
     <button
       className={`absolute top-2/4 right-4 p-1 rounded-full bg-pink-500 transition duration-500 delay-100 ${
         text ? "-translate-y-2/4" : "translate-y-full"
-      }`}
+      }`} onClick={handleAddComment}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
