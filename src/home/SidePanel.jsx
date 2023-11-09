@@ -1,4 +1,4 @@
-import HeartIcon from "../assets/HeartIcon";
+import HeartIcon from "../assets/MainHeartIcon";
 import CommentIcon from "../assets/CommentIcon";
 import BookmarkIcon from "../assets/BookmarkIcon";
 import ArrowShareIcon from "../assets/ArrowShareIcon";
@@ -21,9 +21,9 @@ const SidePanel = () => {
 
   const handleFavourite = () => {
     setFavFilled(!favCount);
-    if(!favFilled){
+    if (!favFilled) {
       setFavCount(favCount + 1);
-    }else{
+    } else {
       setFavCount(favCount - 1);
     }
   };
@@ -54,7 +54,10 @@ const SidePanel = () => {
 
         {/* Favourite */}
         <article className="grid place-items-center">
-          <BookmarkIcon handleFavourite={handleFavourite} favFilled={favFilled}/>
+          <BookmarkIcon
+            handleFavourite={handleFavourite}
+            favFilled={favFilled}
+          />
           <span>{favCount}</span>
         </article>
 

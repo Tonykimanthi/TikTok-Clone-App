@@ -1,5 +1,5 @@
-import { useState } from "react";
 import Home from "./home/Home";
+import Comments from "./home/CommentsSection";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       </h1>
       <div className="bg-white mt-3 w-11/12 max-w-xs h-[85vh] rounded overflow-hidden relative">
         <Home />
+        <Comments />
       </div>
     </>
   );
