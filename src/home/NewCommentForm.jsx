@@ -1,9 +1,9 @@
 import ArrowUpIcon from "../assets/ArrowUpIcon";
 
-const AddNewComment = ({text, handleDisplayIcon, handleAddComment}) => {
+const NewCommentForm = ({text, handleDisplayIcon, handleAddComment}) => {
   
   return (
-    <form onSubmit={(e)=>e.preventDefault()} className="p-2 flex gap-x-2 items-center absolute bottom-0 left-0 right-0">
+    <form onSubmit={(e)=>e.preventDefault()} className="p-2 flex gap-x-2 items-center absolute bottom-0 left-0 right-0 border-t">
       <div className="w-9 h-9 flex justify-center items-center text-white text-xl font-medium rounded-full p-4 bg-teal-500">
         T
       </div>
@@ -21,4 +21,4 @@ const AddNewComment = ({text, handleDisplayIcon, handleAddComment}) => {
   );
 };
 
-export default AddNewComment;
+export default NewCommentForm;

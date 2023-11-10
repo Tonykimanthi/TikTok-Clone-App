@@ -1,4 +1,4 @@
-const XmarkIcon = () => {
+const CloseCommentsIcon = ({ handleShowComments }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +7,7 @@ const XmarkIcon = () => {
       strokeWidth={2}
       stroke="currentColor"
       className="w-5 h-5 absolute top-3 right-3 cursor-pointer hover:scale-110 transition"
+      onClick={handleShowComments}
     >
       <path
         strokeLinecap="round"
@@ -17,4 +18,4 @@ const XmarkIcon = () => {
   );
 };
 
-export default XmarkIcon;
+export default CloseCommentsIcon;
