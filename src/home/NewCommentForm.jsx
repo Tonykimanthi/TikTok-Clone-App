@@ -13,7 +13,7 @@ const NewCommentForm = ({text, handleDisplayIcon, handleAddComment}) => {
           value={text}
           onChange={handleDisplayIcon}
           placeholder="Add comment..."
-          className="w-full h-full px-4 bg-slate-100 outline-none"
+          className="w-full h-full pl-4 pr-12 bg-slate-100 outline-none"
         />
         <ArrowUpIcon text={text} handleAddComment={handleAddComment}/>
       </div>
