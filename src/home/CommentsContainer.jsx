@@ -16,7 +16,7 @@ const CommentsContainer = ({showComments, handleShowComments, commentsList, hand
         </h2>
         <CloseCommentsIcon handleShowComments={handleShowComments}/>
       </header>
-      <main className="mt-4">
+      <main className="mt-4 h-[17.2rem] overflow-y-auto scrollbar-hide">
         <ul className="flex flex-col-reverse space-y-4">
           <UserComment commentsList={commentsList} />
         </ul>
