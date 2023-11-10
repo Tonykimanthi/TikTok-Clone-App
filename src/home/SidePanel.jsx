@@ -4,7 +4,7 @@ import BookmarkIcon from "../assets/BookmarkIcon";
 import ArrowShareIcon from "../assets/ArrowShareIcon";
 import { useState } from "react";
 
-const SidePanel = ({handleShowComments, userComment}) => {
+const SidePanel = ({handleShowComments, commentsList}) => {
   const [likeFilled, setLikeFilled] = useState(false);
   const [likesCount, setLikesCount] = useState(0);
   const [favFilled, setFavFilled] = useState(false);
@@ -49,7 +49,7 @@ const SidePanel = ({handleShowComments, userComment}) => {
         {/* Comments */}
         <article className="grid place-items-center">
           <CommentIcon handleShowComments={handleShowComments}/>
-          <span>{userComment.length}</span>
+          <span>{commentsList.length}</span>
         </article>
 
         {/* Favourite */}

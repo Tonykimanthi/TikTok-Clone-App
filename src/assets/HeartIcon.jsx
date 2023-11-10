@@ -1,4 +1,4 @@
-const HeartIcon = ({ heartIconSize, handleLike, like }) => {
+const HeartIcon = ({ handleLike, like }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,9 +6,10 @@ const HeartIcon = ({ heartIconSize, handleLike, like }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`${heartIconSize} ${
+      className={`w-4 h-4 ${
         like ? "fill-pink-500 stroke-pink-500" : "fill-none stroke-slate-500"
-      } cursor-pointer`} onClick={handleLike}
+      } cursor-pointer`}
+      onClick={handleLike}
     >
       <path
         strokeLinecap="round"

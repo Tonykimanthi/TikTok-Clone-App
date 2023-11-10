@@ -1,8 +1,8 @@
 import CloseCommentsIcon from "../assets/CloseCommentsIcon";
-import PrimaryComment from "./DisplayComments";
+import UserComment from "./UserComment";
 import NewCommentForm from "./NewCommentForm";
 
-const CommentsContainer = ({showComments, handleShowComments, userComment, handleAddComment, text, handleDisplayIcon}) => {
+const CommentsContainer = ({showComments, handleShowComments, commentsList, handleAddComment, text, handleDisplayIcon}) => {
 
   return (
     <section
@@ -12,13 +12,13 @@ const CommentsContainer = ({showComments, handleShowComments, userComment, handl
     >
       <header className="flex justify-center items-center">
         <h2 className="font-medium">
-          <span className="mr-1">{userComment.length}</span>comments
+          <span className="mr-1">{commentsList.length}</span>comments
         </h2>
         <CloseCommentsIcon handleShowComments={handleShowComments}/>
       </header>
       <main className="mt-4">
         <ul className="space-y-4">
-          <PrimaryComment userComment={userComment} />
+          <UserComment commentsList={commentsList} />
         </ul>
       </main>
       <NewCommentForm

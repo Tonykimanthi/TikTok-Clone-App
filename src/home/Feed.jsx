@@ -1,7 +1,7 @@
 import NameCaption from "./NameCaption";
 import SidePanel from "./SidePanel";
 
-const Feed = ({ showComments, handleShowComments, userComment }) => {
+const Feed = ({ showComments, handleShowComments, commentsList }) => {
   return (
     <main className="h-[72%] relative">
       <img
@@ -13,7 +13,7 @@ const Feed = ({ showComments, handleShowComments, userComment }) => {
       <SidePanel
         showComments={showComments}
         handleShowComments={handleShowComments}
-        userComment={userComment}
+        commentsList={commentsList}
       />
     </main>
   );

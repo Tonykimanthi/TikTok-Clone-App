@@ -1,10 +1,6 @@
-import { useState } from "react";
 
-const DislikeIcon = ({ dislikeIconSize }) => {
-  const [fillDislike, setFillDislike] = useState(false);
-  const handleDislike = () => {
-    setFillDislike(!fillDislike);
-  };
+const DislikeIcon = ({dislike, handleDislike}) => {
+  
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +8,8 @@ const DislikeIcon = ({ dislikeIconSize }) => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={`${dislikeIconSize} ${
-        fillDislike ? "fill-black" : "fill-none"
+      className={`w-4 h-4 ${
+        dislike ? "fill-black" : "fill-none"
       } cursor-pointer`}
       onClick={handleDislike}
     >
