@@ -2,9 +2,9 @@ const Header = () => {
   return (
     <header className="bg-black flex justify-between items-center pt-6 pb-0.5 px-3">
       <nav className="font-medium mx-auto space-x-4 text-[#F5E2CB] text-lg">
-        <button>Friends</button>
-        <button>Following</button>
-        <button>For You</button>
+        <button className="hover:text-[#e9c08b] transition">Friends</button>
+        <button className="hover:text-[#e9c08b] transition">Following</button>
+        <button className="hover:text-[#e9c08b] transition">For You</button>
       </nav>
       <button>
         <svg
