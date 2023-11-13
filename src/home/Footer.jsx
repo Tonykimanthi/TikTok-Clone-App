@@ -5,7 +5,7 @@ import ChatBubbleIcon from "../assets/ChatBubbleIcon";
 import UserIcon from "../assets/UserIcon";
 import VideoTimeline from "./VideoTimeline";
 
-const Footer = () => {
+const Footer = ({currentTime, duration}) => {
   return (
     <footer className="bg-black h-full">
       <main className="px-2.5 py-2 absolute left-0 right-0 bottom-0 flex justify-between items-center">
@@ -34,7 +34,7 @@ const Footer = () => {
             Profile
           </button>
         </div>
-        <VideoTimeline />
+        <VideoTimeline currentTime={currentTime} duration={duration}/>
       </main>
     </footer>
   );
