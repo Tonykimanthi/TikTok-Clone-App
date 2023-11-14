@@ -8,7 +8,7 @@ function App() {
   const [commentsList, setCommentsList] = useState([
     {
       imgURL:
-        "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
+        "https://images.unsplash.com/photo-1630208232589-e42b29428b19?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGUlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D",
       userName: "John Michael",
       commentDesc: "I created it using React.",
       timeElapsed: "18h",
@@ -29,7 +29,7 @@ function App() {
       setCommentsList((comments) => [...comments,
         {
           imgURL:
-            "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
+            "https://media.istockphoto.com/id/1500238408/photo/program-code-development-icon-on-a-digital-lcd-display-with-reflection.webp?b=1&s=170667a&w=0&k=20&c=CfaVabgMcwwc-ijzVAxNs_Sz6q3JVPJnlQ-Py-dpuAQ=",
           userName: "TNY",
           commentDesc: text,
           timeElapsed: elapsedTime,

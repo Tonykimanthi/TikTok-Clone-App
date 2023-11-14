@@ -4,8 +4,8 @@ const NewCommentForm = ({text, handleDisplayIcon, handleAddComment}) => {
   
   return (
     <form onSubmit={(e)=>e.preventDefault()} className="p-2 flex gap-x-2 items-center absolute bottom-0 left-0 right-0 border-t">
-      <div className="w-9 h-9 flex justify-center items-center text-white text-xl font-medium rounded-full p-4 bg-teal-500">
-        T
+      <div className="w-9 h-9 text-xl font-medium rounded-full overflow-hidden">
+        <img className="w-full h-full object-cover" src="https://media.istockphoto.com/id/1500238408/photo/program-code-development-icon-on-a-digital-lcd-display-with-reflection.webp?b=1&s=170667a&w=0&k=20&c=CfaVabgMcwwc-ijzVAxNs_Sz6q3JVPJnlQ-Py-dpuAQ=" alt="" />
       </div>
       <div className="w-full h-9 rounded-full relative overflow-hidden">
         <input
