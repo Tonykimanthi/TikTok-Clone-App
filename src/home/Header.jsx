@@ -4,7 +4,7 @@ const Header = () => {
       <nav className="font-medium mx-auto space-x-4 text-[#F5E2CB] text-lg">
         <button className="hover:text-[#e9c08b] transition">Friends</button>
         <button className="hover:text-[#e9c08b] transition">Following</button>
-        <button className="hover:text-[#e9c08b] transition">For You</button>
+        <button className="text-[#e9c08b]">For You</button>
       </nav>
       <button>
         <svg

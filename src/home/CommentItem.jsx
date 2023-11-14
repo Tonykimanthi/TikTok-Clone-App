@@ -15,7 +15,7 @@ const CommentItem = ({ comment }) => {
   const handleDislike = () => {
     setDislike(!dislike);
     setLike(false);
-    setLikeCount(dislike && null);
+    setLikeCount(0);
   };
 
   return (

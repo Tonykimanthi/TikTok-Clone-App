@@ -9,14 +9,14 @@ function App() {
     {
       imgURL:
         "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
-      userName: "Tony Km",
+      userName: "John Michael",
       commentDesc: "I created it using React.",
       timeElapsed: "18h",
     },
     {
       imgURL:
         "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
-      userName: "Fred Okello",
+      userName: "Annah David",
       commentDesc: "React is easy to learn",
       timeElapsed: "8h",
     },
@@ -30,7 +30,7 @@ function App() {
         {
           imgURL:
             "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
-          userName: "Tony Km",
+          userName: "TNY",
           commentDesc: text,
           timeElapsed: elapsedTime,
         }

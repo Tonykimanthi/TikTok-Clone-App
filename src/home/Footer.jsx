@@ -11,7 +11,7 @@ const Footer = ({currentTime, duration}) => {
       <main className="px-2.5 py-2 absolute left-0 right-0 bottom-0 flex justify-between items-center">
         {/* Home/Discover */}
         <div className="flex items-center gap-x-5">
-          <button className="text-[#f5e2cb] text-sm grid place-items-center leading-4 hover:text-[#e9c08b] transition">
+          <button className="text-[#e9c08b] text-sm grid place-items-center leading-4 hover:text-[#e9c08b] transition">
             <HomeIcon />
             Home
           </button>
