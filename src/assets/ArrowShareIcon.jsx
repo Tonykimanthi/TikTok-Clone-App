@@ -1,6 +1,7 @@
-const ArrowShareIcon = () => {
+const ArrowShareIcon = ({handleShowShare}) => {
   return (
     <svg
+    onClick={handleShowShare}
       width="35"
       height="35"
       fill="currentColor"

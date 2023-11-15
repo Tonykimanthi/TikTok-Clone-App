@@ -3,7 +3,7 @@ import Feed from "./Feed";
 import Footer from "./Footer";
 import { useEffect, useRef, useState } from "react";
 
-const Home = ({ showComments, handleShowComments, commentsList }) => {
+const Home = ({ showComments, handleShowComments, commentsList, handleShowShare }) => {
   const videoRef = useRef(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -46,6 +46,7 @@ const Home = ({ showComments, handleShowComments, commentsList }) => {
         videoRef={videoRef}
         onPause={onPause}
         handlePause={handlePause}
+        handleShowShare={handleShowShare}
       />
       <Footer currentTime={currentTime} duration={duration} />
     </>

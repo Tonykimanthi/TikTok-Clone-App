@@ -1,10 +1,12 @@
 import Home from "./home/Home";
 import CommentsContainer from "./home/CommentsContainer";
+import ShareContainer from "./home/ShareContainer";
 import { useState } from "react";
 
 function App() {
   const [showComments, setShowComments] = useState(false);
   const [text, setText] = useState("");
+  const [share, setShare] = useState(false);
   const [commentsList, setCommentsList] = useState([
     {
       imgURL:
@@ -26,14 +28,15 @@ function App() {
     if (text) {
       const currentTime = new Date();
       const elapsedTime = calcTimeElapsed(currentTime);
-      setCommentsList((comments) => [...comments,
+      setCommentsList((comments) => [
+        ...comments,
         {
           imgURL:
             "https://media.istockphoto.com/id/1500238408/photo/program-code-development-icon-on-a-digital-lcd-display-with-reflection.webp?b=1&s=170667a&w=0&k=20&c=CfaVabgMcwwc-ijzVAxNs_Sz6q3JVPJnlQ-Py-dpuAQ=",
           userName: "TNY",
           commentDesc: text,
           timeElapsed: elapsedTime,
-        }
+        },
       ]);
       setText("");
     }
@@ -43,6 +46,9 @@ function App() {
   };
   const handleDisplayIcon = (e) => {
     setText(e.target.value);
+  };
+  const handleShowShare = () => {
+    setShare(!share);
   };
 
   const calcTimeElapsed = (currentTime) => {
@@ -65,8 +71,21 @@ function App() {
         Tiktok Clone App
       </h1>
       <div className="bg-white mt-3 w-11/12 max-w-xs h-[85vh] rounded overflow-hidden relative">
-        <Home showComments={showComments} handleShowComments={handleShowComments} commentsList={commentsList}/>
-        <CommentsContainer showComments={showComments} handleShowComments={handleShowComments} commentsList={commentsList} handleAddComment={handleAddComment} text={text} handleDisplayIcon={handleDisplayIcon}/>
+        <Home
+          showComments={showComments}
+          handleShowComments={handleShowComments}
+          commentsList={commentsList}
+          handleShowShare={handleShowShare}
+        />
+        <CommentsContainer
+          showComments={showComments}
+          handleShowComments={handleShowComments}
+          commentsList={commentsList}
+          handleAddComment={handleAddComment}
+          text={text}
+          handleDisplayIcon={handleDisplayIcon}
+        />
+        <ShareContainer share={share} handleShowShare={handleShowShare}/>
       </div>
     </>
   );

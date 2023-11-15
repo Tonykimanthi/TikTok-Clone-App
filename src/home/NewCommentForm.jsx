@@ -10,6 +10,7 @@ const NewCommentForm = ({text, handleDisplayIcon, handleAddComment}) => {
       <div className="w-full h-9 rounded-full relative overflow-hidden">
         <input
           type="text"
+          name="text"
           value={text}
           onChange={handleDisplayIcon}
           placeholder="Add comment..."

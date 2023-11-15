@@ -2,7 +2,7 @@ import NameCaption from "./NameCaption";
 import SidePanel from "./SidePanel";
 import { FaPlay } from "react-icons/fa";
 
-const Feed = ({ showComments, handleShowComments, commentsList, videoRef, onPause, handlePause }) => {
+const Feed = ({ showComments, handleShowComments, commentsList, videoRef, onPause, handlePause, handleShowShare }) => {
   return (
     <main className="h-[72%] relative bg-black">
       <video ref={videoRef} className="w-full h-full cursor-pointer" autoPlay muted loop onClick={handlePause}>
@@ -17,6 +17,7 @@ const Feed = ({ showComments, handleShowComments, commentsList, videoRef, onPaus
         showComments={showComments}
         handleShowComments={handleShowComments}
         commentsList={commentsList}
+        handleShowShare={handleShowShare}
       />
     </main>
   );
