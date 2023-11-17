@@ -35,7 +35,7 @@ const Feed = ({
     },
   ]);
 
-  const handleNextVideo = (e) => {
+  const handleNextFeed = (e) => {
     if (e.key === "ArrowDown") {
       setFeedCount((prevCount) => (prevCount + 1) % feeds.length);
       setOnPause(false);
@@ -52,17 +52,17 @@ const Feed = ({
     const handleTimeDuration = () => {
       setDuration(videoEl.duration);
     };
-    window.addEventListener("keydown", handleNextVideo);
+    window.addEventListener("keydown", handleNextFeed);
 
     videoEl.addEventListener("timeupdate", handleTimeUpdate);
     videoEl.addEventListener("durationchange", handleTimeDuration);
 
     return () => {
-      window.removeEventListener("keydown", handleNextVideo);
+      window.removeEventListener("keydown", handleNextFeed);
       videoEl.removeEventListener("timeupdate", handleTimeUpdate);
-    videoEl.removeEventListener("durationchange", handleTimeDuration);
+      videoEl.removeEventListener("durationchange", handleTimeDuration);
     };
-  }, [feedCount, handleNextVideo]);
+  }, [feedCount, handleNextFeed]);
 
   return (
     <main className="h-[72%] relative bg-black">
