@@ -4,7 +4,7 @@ import BookmarkIcon from "../assets/BookmarkIcon";
 import ArrowShareIcon from "../assets/ArrowShareIcon";
 import { useState } from "react";
 
-const SidePanel = ({handleShowComments, commentsList, handleShowShare}) => {
+const SidePanel = ({handleShowComments, commentsList, handleShowShare, feeds, feedCount}) => {
   const [likeFilled, setLikeFilled] = useState(false);
   const [likesCount, setLikesCount] = useState(0);
   const [favFilled, setFavFilled] = useState(false);
@@ -35,7 +35,7 @@ const SidePanel = ({handleShowComments, commentsList, handleShowShare}) => {
         <article className="w-10 h-10 border border-white rounded-full overflow-hidden cursor-pointer">
           <img
             className="w-full h-full object-cover"
-            src="https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw="
+            src={feeds[feedCount].userImgURL}
             alt="Profile image"
           />
         </article>
