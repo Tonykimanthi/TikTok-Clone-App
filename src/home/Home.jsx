@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 const Home = ({ showComments, handleShowComments, commentsList, handleShowShare }) => {
   const videoRef = useRef(null);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(null);
+  const [duration, setDuration] = useState(null);
   const [onPause, setOnPause] = useState(false);
 
   useEffect(() => {
@@ -45,8 +45,13 @@ const Home = ({ showComments, handleShowComments, commentsList, handleShowShare 
         commentsList={commentsList}
         videoRef={videoRef}
         onPause={onPause}
+        setOnPause={setOnPause}
         handlePause={handlePause}
         handleShowShare={handleShowShare}
+        currentTime={currentTime}
+        duration={duration}
+        setCurrentTime={setCurrentTime}
+        setDuration={setDuration}
       />
       <Footer currentTime={currentTime} duration={duration} />
     </>
