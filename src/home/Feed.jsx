@@ -19,19 +19,28 @@ const Feed = ({
   const [feeds, setFeeds] = useState([
     {
       userVideoURL:
-        "https://assets.mixkit.co/videos/preview/mixkit-going-down-a-curved-highway-through-a-mountain-range-41576-large.mp4",
+        "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4",
       userImgURL:
-        "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
+        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhY3R8ZW58MHx8MHx8fDA%3D",
       userName: "Net Ninja",
-      Caption: "How to get started with React.",
+      Caption: "React part 22 | LIKE and follow for more tips & tricks!🤟",
     },
     {
       userVideoURL:
-        "https://assets.mixkit.co/videos/preview/mixkit-waves-coming-to-the-beach-5016-large.mp4",
+        "https://assets.mixkit.co/videos/preview/mixkit-computer-code-running-on-a-screen-10325-large.mp4",
       userImgURL:
-        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVhY3QlMjBqc3xlbnwwfHwwfHx8MA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1663054500009-d4fc1a8ad953?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJlYWN0fGVufDB8fDB8fHww",
       userName: "React",
       Caption: "Super React JS",
+    },
+    {
+      userVideoURL:
+        "https://assets.mixkit.co/videos/preview/mixkit-html-code-on-a-dark-background-45378-large.mp4",
+      userImgURL:
+        "https://images.unsplash.com/photo-1485856407642-7f9ba0268b51?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJlYWN0fGVufDB8fDB8fHww",
+      userName: "Richard Oliver Bray",
+      Caption:
+        "How to get data from an API in React. #webdev #react #javascript",
     },
   ]);
 
@@ -39,8 +48,6 @@ const Feed = ({
     if (e.key === "ArrowDown") {
       setFeedCount((prevCount) => (prevCount + 1) % feeds.length);
       setOnPause(false);
-
-      console.log(feedCount);
     }
   };
 
@@ -82,7 +89,7 @@ const Feed = ({
           onPause ? "" : "hidden"
         } text-white absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4`}
       />
-      <NameCaption feeds={feeds} feedCount={feedCount}/>
+      <NameCaption feeds={feeds} feedCount={feedCount} />
       <SidePanel
         showComments={showComments}
         handleShowComments={handleShowComments}
