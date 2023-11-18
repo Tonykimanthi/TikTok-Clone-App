@@ -67,10 +67,10 @@ function App() {
 
   return (
     <>
-      <h1 className="text-3xl text-teal-600 text-center font-bold mt-3">
+      <h1 className="text-2xl text-white text-center font-extrabold mt-3">
         Tiktok Clone App
       </h1>
-      <div className="bg-white mt-3 w-11/12 max-w-xs h-[85vh] rounded overflow-hidden relative">
+      <div className="bg-white mt-3 w-11/12 max-w-xs h-[85vh] rounded-2xl border-8 border-slate-400 overflow-hidden relative">
         <Home
           showComments={showComments}
           handleShowComments={handleShowComments}
