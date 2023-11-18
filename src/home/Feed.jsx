@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NameCaption from "./NameCaption";
 import SidePanel from "./SidePanel";
 import { FaPlay } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Feed = ({
   showComments,
@@ -43,7 +44,6 @@ const Feed = ({
         "How to get data from an API in React. #webdev #react #javascript",
     },
   ]);
-
   const handleNextFeed = (e) => {
     if (e.key === "ArrowDown") {
       setFeedCount((prevCount) => (prevCount + 1) % feeds.length);
@@ -53,6 +53,11 @@ const Feed = ({
 
   useEffect(() => {
     const videoEl = videoRef.current;
+
+    if (!videoEl) {
+      return;
+    }
+
     const handleTimeUpdate = () => {
       setCurrentTime(videoEl.currentTime);
     };
@@ -73,17 +78,20 @@ const Feed = ({
 
   return (
     <main className="h-[72%] relative bg-black">
-      <video
-        key={feedCount}
-        ref={videoRef}
-        className="w-full h-full cursor-pointer"
-        autoPlay
-        muted
-        loop
-        onClick={handlePause}
-      >
-        <source src={feeds[feedCount].userVideoURL} type="video/mp4" />
-      </video>
+        <motion.video
+          key={feedCount}
+          ref={videoRef}
+          className="w-full h-full cursor-pointer"
+          autoPlay
+          muted
+          loop
+          onClick={handlePause}
+          initial={{ y:   300, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ease: "easeOut"}}
+        >
+          <source src={feeds[feedCount].userVideoURL} type="video/mp4" />
+        </motion.video>
       <FaPlay
         className={`${
           onPause ? "" : "hidden"
