@@ -46,7 +46,10 @@ const Feed = ({
   ]);
   const handleNextFeed = (e) => {
     if (e.key === "ArrowDown") {
-      setFeedCount((prevCount) => (prevCount + 1) % feeds.length);
+      setFeedCount(prevCount => (prevCount + 1) % feeds.length);
+      setOnPause(false);
+    }else if(e.key === "ArrowUp"){
+      setFeedCount(prevCount =>  prevCount === 0 ? feeds.length - 1 : prevCount - 1);
       setOnPause(false);
     }
   };
@@ -86,8 +89,8 @@ const Feed = ({
           muted
           loop
           onClick={handlePause}
-          initial={{ y:   300, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ease: "easeOut"}}
         >
           <source src={feeds[feedCount].userVideoURL} type="video/mp4" />
