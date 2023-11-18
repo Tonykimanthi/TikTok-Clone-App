@@ -12,14 +12,14 @@ function App() {
       imgURL:
         "https://images.unsplash.com/photo-1630208232589-e42b29428b19?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHByb2ZpbGUlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D",
       userName: "John Michael",
-      commentDesc: "I created it using React.",
+      commentDesc: "You created it using React?",
       timeElapsed: "18h",
     },
     {
       imgURL:
         "https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=--Ei0owZ8KqwVppB5o0bMRG4aNV8VA0HHnsH1YfuxAw=",
       userName: "Annah David",
-      commentDesc: "React is easy to learn",
+      commentDesc: "React is easy to learn?",
       timeElapsed: "8h",
     },
   ]);
@@ -85,7 +85,7 @@ function App() {
           text={text}
           handleDisplayIcon={handleDisplayIcon}
         />
-        <ShareContainer share={share} handleShowShare={handleShowShare}/>
+        <ShareContainer share={share} handleShowShare={handleShowShare} />
       </div>
     </>
   );

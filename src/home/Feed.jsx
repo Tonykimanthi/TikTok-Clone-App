@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NameCaption from "./NameCaption";
 import SidePanel from "./SidePanel";
 import { FaPlay } from "react-icons/fa";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Feed = ({
   showComments,
@@ -42,6 +42,24 @@ const Feed = ({
       userName: "Richard Oliver Bray",
       Caption:
         "How to get data from an API in React. #webdev #react #javascript",
+    },
+    {
+      userVideoURL:
+        "https://assets.mixkit.co/videos/preview/mixkit-dashboard-of-a-car-72-large.mp4",
+      userImgURL:
+        "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGUlMjBwaG90b3xlbnwwfHwwfHx8MA%3D%3D",
+      userName: "Luca",
+      Caption:
+        "Driving in the city traffic.",
+    },
+    {
+      userVideoURL:
+        "https://assets.mixkit.co/videos/preview/mixkit-computer-hacker-logging-a-website-with-code-47321-large.mp4",
+      userImgURL:
+        "https://media.istockphoto.com/id/1500238408/photo/program-code-development-icon-on-a-digital-lcd-display-with-reflection.webp?b=1&s=170667a&w=0&k=20&c=CfaVabgMcwwc-ijzVAxNs_Sz6q3JVPJnlQ-Py-dpuAQ=",
+      userName: "TNY",
+      Caption:
+        "Coding tips",
     },
   ]);
   const handleNextFeed = (e) => {
@@ -91,7 +109,7 @@ const Feed = ({
           onClick={handlePause}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ease: "easeOut"}}
+          transition={{ease: "easeOut", duration: 0.2}}
         >
           <source src={feeds[feedCount].userVideoURL} type="video/mp4" />
         </motion.video>
